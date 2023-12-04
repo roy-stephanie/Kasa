@@ -1,0 +1,23 @@
+@import "../../scss/mixin";
+
+.padding {
+  padding: 40px 100px;
+}
+
+@include for-phone-only {
+  .padding {
+    padding: 20px;
+  }
+}
+
+@include for-tablet-portrait-down {
+  .padding {
+    padding: 20px;
+  }
+}
+
+@include for-tablet-landscape-down {
+  .padding {
+    padding: 20px;
+  }
+}

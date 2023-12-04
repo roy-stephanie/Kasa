@@ -1,0 +1,43 @@
+@import '../../scss/mixin.scss';
+
+.Host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+
+  &_Name {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    justify-self: flex-end;
+  }
+
+  &_Image {
+    width: 64px;
+    height: 64px;
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+@include for-phone-only {
+  .Host {
+    column-gap: 5px;
+
+    &_Name {
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+    &_Image {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "./src/scss/custom.scss";
+@import "./src/scss/mixin.scss";
+
+.Logo {
+  & > img {
+    height: 58px;
+  }
+}
+
+@include for-phone-only {
+  .Logo {
+    & > img {
+      height: 38px;
+    }
+  }
+}

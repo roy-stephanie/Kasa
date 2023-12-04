@@ -1,0 +1,32 @@
+@import "./src/scss/custom.scss";
+@import "./src/scss/mixin.scss";
+
+.HomeGallery {
+  width: 100%;
+  background: $tertiaryColor;
+  margin-top: 43px;
+  padding: 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+
+@include for-phone-only {
+  .HomeGallery {
+    padding: 0;
+    margin-top: 20px;
+    row-gap: 20px;
+    background: $secondaryColor;
+  }
+}
+
+
+@include for-tablet-portrait-down {
+  .HomeGallery {
+    padding: 0;
+    background: $secondaryColor;
+  }
+}

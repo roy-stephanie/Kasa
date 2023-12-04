@@ -1,0 +1,94 @@
+@import "./src/scss/custom.scss";
+@import "./src/scss/mixin.scss";
+
+.Dropdown {
+  width: 100%;
+  align-self: flex-start;
+  margin-bottom: 20px;
+
+  &_Title {
+    color: $secondaryColor;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background: #FF6060;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    & > span {
+      font-size: 24px;
+      line-height: 34.22px;
+    }
+
+    & > img {
+      height: 16px;
+      width: 26px;
+    }
+
+    & > :first-child {
+      flex-basis: 100%;
+    }
+
+    &_Close {
+      align-items: flex-end;
+      transform: rotate(0);
+      transition: all 300ms ease-in-out;
+
+      &_Active {
+        transform: rotate(180deg);
+        transition: all 300ms ease-in-out;
+      }
+    }
+  }
+
+  &_Content {
+    background: #F7F7F7;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+
+    &.InActive {
+      height: 0;
+      opacity: 0;
+      padding: 0 0;
+      transition: padding 10ms ease-in-out, opacity 10ms ease-in-out, height 10ms ease-in-out;
+    }
+
+    &.Active {
+      height: auto;
+      opacity: 1;
+      padding: 20px 25px;
+      transition: padding 10ms ease-in-out, opacity 200ms ease-in-out, height 200ms ease-in-out;
+    }
+
+    & > ul {
+      list-style: none;
+    }
+  }
+}
+
+@include for-phone-only {
+  .Dropdown {
+    &_Content {
+      font-size: 12px;
+      line-height: 17.11px;
+    }
+
+    &_Title {
+      border-radius: 5px;
+
+      & > span {
+        font-size: 13px;
+        line-height: 18.54px;
+      }
+
+      & > img {
+        height: 9px;
+        width: 16px;
+      }
+
+    }
+  }
+}

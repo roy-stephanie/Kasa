@@ -1,0 +1,74 @@
+@import "./src/scss/custom.scss";
+@import "./src/scss/mixin.scss";
+
+.GalleryModule {
+  position: relative;
+  width: 31%;
+  height: 340px;
+  border-radius: 10px;
+  color: $secondaryColor;
+  background: linear-gradient(180deg, $primaryColor 0%, rgba(0, 0, 0, 0.5) 100%);
+
+  & > div {
+    width: 100%;
+    height: 100%;
+  }
+
+  &_Image {
+    width: 100%;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  &_Title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 25.67px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+
+    &:hover {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+    }
+
+    & > span {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-weight: 600;
+    }
+  }
+}
+
+@include for-tablet-portrait-down {
+  .GalleryModule {
+    width: 48%;
+  }
+}
+
+@include for-desktop-down {
+  .GalleryModule {
+    width: 48%;
+  }
+}
+
+@include for-phone-only {
+  .GalleryModule {
+    width: 100%;
+    height: 255px;
+    &_Title {
+      font-size: 16px;
+      line-height: 21.67px;
+    }
+  }
+}
