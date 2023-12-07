@@ -1,10 +1,12 @@
-@import "./src/scss/custom.scss";
-@import "./src/scss/mixin.scss";
+@import "./../../../src/scss/custom.scss";
+@import "./../../../src/scss/mixin.scss";
 
 .Dropdown {
   width: 100%;
   align-self: flex-start;
   margin-bottom: 20px;
+  overflow: hidden;
+  z-index: 99;
 
   &_Title {
     color: $secondaryColor;
@@ -14,7 +16,11 @@
     flex-direction: row;
     background: #FF6060;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     & > span {
       font-size: 24px;
@@ -44,26 +50,25 @@
 
   &_Content {
     background: #F7F7F7;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
+    overflow: hidden;
 
-    &.InActive {
-      height: 0;
-      opacity: 0;
-      padding: 0 0;
-      transition: padding 10ms ease-in-out, opacity 10ms ease-in-out, height 10ms ease-in-out;
+    &_Disable {
+      max-height: 0;
+      padding: 0 25px;
+      transition: max-height 550ms ease-in-out, padding 650ms ease;
     }
 
-    &.Active {
-      height: auto;
-      opacity: 1;
+    &_Active {
+      max-height: 1000px;
       padding: 20px 25px;
-      transition: padding 10ms ease-in-out, opacity 200ms ease-in-out, height 200ms ease-in-out;
+      transition: max-height 550ms ease-in-out, padding 650ms ease;
     }
 
-    & > ul {
+    & > div > ul {
       list-style: none;
     }
   }
@@ -88,7 +93,6 @@
         height: 9px;
         width: 16px;
       }
-
     }
   }
 }
