@@ -59,13 +59,13 @@
     &_Disable {
       max-height: 0;
       padding: 0 25px;
-      transition: max-height 550ms ease-in-out, padding 650ms ease;
+      transition: max-height 450ms ease-in-out, padding 550ms ease;
     }
 
     &_Active {
       max-height: 1000px;
       padding: 20px 25px;
-      transition: max-height 550ms ease-in-out, padding 650ms ease;
+      transition: max-height 450ms ease-in-out, padding 550ms ease;
     }
 
     & > div > ul {
