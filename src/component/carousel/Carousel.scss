@@ -84,6 +84,20 @@
     height: 255px;
     margin-top: 20px;
     border-radius: 10px;
+
+    &_SlideLeft {
+      opacity: 1;
+      height: 10%;
+    }
+
+    &_SlideRight {
+      opacity: 1;
+      height: 10%;
+    }
+
+    &:hover &_Bullet {
+      opacity: 0;
+    }
   }
   .image {
     border-radius: 10px;
